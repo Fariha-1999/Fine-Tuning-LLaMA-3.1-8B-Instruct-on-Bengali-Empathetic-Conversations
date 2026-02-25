@@ -15,7 +15,7 @@ Generate context-aware, empathetic responses in Bengali for user questions using
 
 - Addition of reflective prefixes for empathetic tone
 
-- Full-sequence tokenization (max_length=1024)
+- Full-sequence tokenization (max_length=1024 on the code I also tried 2048 token and full sequence also . It worked but all time after half of the training sample cuda memeory runned out i didnt find the exact cause)
 
 - Fine-tuning LLaMA 3.1-8B-Instruct using QLoRA (4-bit quantized LoRA) for efficient training on Kaggle free GPU
 
