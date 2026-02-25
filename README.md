@@ -16,6 +16,7 @@ Generate context-aware, empathetic responses in Bengali for user questions using
 - Addition of reflective prefixes for empathetic tone
 
 - Full-sequence tokenization (max_length=1024 on the code I also tried 2048 token and full sequence also . It worked but all time after half of the training sample cuda memeory runned out i didnt find the exact cause)
+- I took 4000 sample at first after half sample training like 2000 sample gpu runned out. Then i reduce the sample  number but ti sayed the same . after half of the sample training spu runned out 
 
 - Fine-tuning LLaMA 3.1-8B-Instruct using QLoRA (4-bit quantized LoRA) for efficient training on Kaggle free GPU
 
@@ -69,11 +70,13 @@ Generate context-aware, empathetic responses in Bengali for user questions using
 
 - Upload the notebook to Google Colab:
 
-  - Go to Colab → File → Upload Notebook
+  - Go to Kaggle → File → Upload Notebook
 
   - Upload `Fine Tuned LLaMA 3.1-8B-Instruct-on-Bengali-Empathetic-Conversations.ipynb`
 
-  - Upload `BengaliEmpatheticConversationsCorpus.csv` to Colab (or Google Drive folder)
+  - Upload `BengaliEmpatheticConversationsCorpus.csv` to kaggle input.
+    
+  - for hugging face model you need access token
 
 - Run the notebook step by step:
 
