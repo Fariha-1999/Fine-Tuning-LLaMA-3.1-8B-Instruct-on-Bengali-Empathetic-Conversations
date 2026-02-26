@@ -15,7 +15,7 @@ Generate context-aware, empathetic responses in Bengali for user questions using
   - Addition of reflective prefixes to maintain an empathetic tone
   - Full-sequence tokenization (max_length=1024 on the code I also tried 2048 token and full sequence also . It worked but all time after half of the training sample cuda memeory runned out i didnt find the exact cause) 
 - Fine-tuning LLaMA 3.1-8B-Instruct using QLoRA (4-bit quantized LoRA) for efficient training on Kaggle free GPU
-- Took 4000 sample at first after half sample training like 2000 sample gpu runned out. Then i reduce the sample number but ti sayed the same . after half of the sample training spu runned out
+- The total sample size is 600. Initially, target was to use 4,000 samples from the dataset, but during training the GPU ran out of memory after processing about half of them (around 2,000 samples). I then reduced the sample size; however, the same issue occurred — the GPU again ran out of memory after training approximately half of the dataset.
 - Response generation for user prompts with multiple samples
 - Logging of generated responses in `GeneratedResponses.json` for reproducibility
 - Experiment logging (`LLAMAExperiments.json`) including LoRA config, losses, metrics, and timestamps
